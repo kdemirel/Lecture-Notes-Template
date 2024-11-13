@@ -1,0 +1,228 @@
+\documentclass[12pt]{article}
+
+% basic packages
+\usepackage[margin=1.2in]{geometry}
+\usepackage[pdftex]{graphicx}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{custom}
+\usepackage{lipsum}
+
+% page formatting
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+\renewcommand{\sectionmark}[1]{\markright{\textsf{\arabic{section}. #1}}}
+\renewcommand{\subsectionmark}[1]{}
+\lhead{\textbf{\thepage} \ \ \nouppercase{\rightmark}}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{}
+\rfoot{}
+\setlength{\headheight}{14pt}
+
+\linespread{1.03} % give a little extra room
+\setlength{\parindent}{0.2in} % reduce paragraph indent a bit
+\setcounter{secnumdepth}{2} % no numbered subsubsections
+\setcounter{tocdepth}{2} % no subsubsections in ToC
+
+\begin{document}
+
+% make title page
+\thispagestyle{empty}
+\bigskip \
+\vspace{0.1cm}
+
+\begin{center}
+{\fontsize{22}{22} \selectfont Lecture Notes on}
+\vskip 16pt
+{\fontsize{36}{36} \selectfont \bf \sffamily Title}
+\vskip 24pt
+{\fontsize{18}{18} \selectfont \rmfamily Name} 
+\vskip 6pt
+{\fontsize{14}{14} \selectfont \ttfamily email@address.com} 
+\vskip 24pt
+\end{center}
+
+{\parindent0pt \baselineskip=15.5pt \lipsum[1]}
+
+% make table of contents
+\newpage
+\microtoc
+\newpage
+
+% main content
+\section{The Scalar-Tensor Theories}
+
+Einstein’s general theory of relativity is a geometrical theory of space-time in which the fundamental object is the metric tensor field. For this reason the theory may be called a “tensor theory”. 
+Before this, G. Nordström had tried to create a "scalar theory" of gravity by extending the Newtonian potential into a Lorentz scalar. 
+However, Nordström's theory lacked a geometric foundation and failed to incorporate the equivalence principle (EP), which is one of the core ideas behind general relativity. 
+This shortcoming led Einstein to eventually develop a theory based on the dynamics of spacetime geometry.
+Scalar-tensor theories of gravity, on the other hand, have evolved as a natural extension of Einstein's General Relativity (GR), driven by various motivations, including the quest to incorporate Mach’s principle and to explain cosmological phenomena that GR does not fully address. 
+This section will trace the development of scalar-tensor theories, beginning with early modifications of GR, the role of scalar fields in cosmology, and their theoretical and experimental implications especially on the inflationary paradigm.
+
+Almost immediately after its publication, theorists began exploring modifications to GR in order to address some of its perceived limitations.
+One of the earliest such modifications was introduced by Theodor Kaluza (1921), who tried to unify gravity and electromagnetism by introducing an additional, fifth dimension to spacetime. 
+Although Kaluza’s theory did not introduce a scalar field in the modern sense, it set the stage for later work where extra degrees of freedom (in this case, dimensions) could modify the gravitational interaction.
+
+A major development came from Pascual Jordan in the 1940s and 1950s, who extended Kaluza’s ideas by introducing a scalar field that could mediate the gravitational interaction. 
+Jordan’s work was motivated by a desire to incorporate Mach’s principle into gravity—a philosophical notion that the inertial mass of an object is influenced by the gravitational influence of the distant stars, a concept Einstein had sought to include in GR but ultimately abandoned.
+
+Jordan’s theory allowed the gravitational constant $G$ to vary as a function of spacetime, being driven by a scalar field, and was part of the larger program to unify gravity with electromagnetism and quantum theory. 
+Jordan formulated these ideas in a series of works that culminated in what is now considered one of the first scalar-tensor theories of gravity. 
+His theory introduced a non-minimal coupling between the scalar field and the metric tensor, which would later become a common feature of scalar-tensor models.
+
+The Lagrangian of Jordan’s scalar-tensor theory can be given by
+\begin{equation} \label{JordansLag}
+    \mathcal{L}_{\mathrm{J}}=\sqrt{-g}\left[\varphi_{\mathrm{J}}^{\gamma}\left(R-\omega_{\mathrm{J}} \frac{1}{\varphi_{\mathrm{J}}^{2}} g^{\mu \nu} \partial_{\mu} \varphi_{\mathrm{J}} \partial_{\nu} \varphi_{\mathrm{J}}\right)+L_{\text {matter}}\left(\varphi_{\mathrm{J}}, \Psi\right)\right]
+\end{equation}
+where $\varphi_{\mathrm{J}}(x)$ is Jordan's scalar field, while $\gamma$ and $\omega_{\mathrm{J}}$ are constants, and $\Psi$ represents matter fields collectively. The introduction of the nonminimal coupling term, $\varphi_{\mathrm{J}}^{\gamma} R$, the first term on the right-hand side, marked the birth of the scalar-tensor theory. The term $L_{\text {matter}}\left(\varphi_{\mathrm{J}}, \Psi\right)$ was for the matter Lagrangian, which may depend generally on the scalar field, as well.
+
+In reduced Planckian units where $c=1$, $\hbar=1$ and $M_P=\sqrt{\frac{c \hbar}{8 \pi G}}=1$, the dimensional analysis indicates that the Lagrangian is found to have a mass dimension 4, while a derivative contributes a mass dimension 1, and the metric tensor is dimensionless. 
+If a scalar field has a conventional canonical kinetic term, then we conclude that the field has a mass dimension 1.
+Now the second term on the right-hand side of \eqref{JordansLag} resembles a kinetic term of $\varphi_{\mathrm{J}}$. 
+Requiring this term to have a correct mass dimension 4 yields the result that $\varphi_{\mathrm{J}}$ has mass dimension $2 / \gamma$. 
+It then follows that $\varphi_{\mathrm{J}}^{\gamma}$, which multiplies $R$ in the first term on the right-hand side of \eqref{JordansLag}, has mass dimension 2, the same as $G^{-1}$. 
+In this way we re-assure ourselves that the first two terms on the right-hand side of \eqref{JordansLag} contain no dimensional constant. This remains true for any value of $\gamma$, although this "invariance" under a change of $\gamma$ need not be respected if $\varphi_{\mathrm{J}}$ enters the matter Lagrangian, in general.
+
+\subsection{The Brans-Dicke Theory}
+
+Jordan’s effort was taken over particularly by Carl Brans and Robert Dicke in 1961. 
+They developed the most well-known scalar-tensor theory which was explicitly formulated to incorporate Mach’s principle into gravity by using of the fact that the specific choice of the value of $\gamma$ is irrelevant so that they defined their field as $\varphi=\varphi_{\mathrm{J}}^{\gamma}$.
+
+This process is justified only because they demanded that the matter part of the Lagrangian $\sqrt{-g} L_{\text {matter}}$ be decoupled from $\varphi(x)$ as an implementation of their requirement that the WEP be respected, in contrast to Jordan's model. 
+The reason for this crucial decision, after the critical argument by Fierz [4] and others. 
+In this way they proposed the basic Lagrangian
+\begin{equation} \label{BDLag}
+\mathcal{L}_{\mathrm{BD}}=\sqrt{-g}\left(\varphi R-\omega \frac{1}{\varphi} g^{\mu \nu} \partial_{\mu} \varphi \partial_{\nu} \varphi+L_{\text {matter}}(\Psi)\right) 
+\end{equation}
+where the dimensionless constant $\omega$ is the only parameter of the theory.
+
+Notice that the nonminimal coupling term, the first term on the right-hand side of \eqref{BDLag}, that replaces the Einstein-Hilbert term, has no gravitational "constant," but is characterized by an effective gravitational constant $G_{\text {eff}}$ defined by
+\begin{equation}
+\frac{1}{16 \pi G_{\text {eff }}}=\varphi 
+\end{equation}
+as long as the dynamical field $\varphi$ varies sufficiently slowly.
+In particular we may expect that $\varphi$ is spatially uniform, but varies slowly with cosmic time, as suggested by Dirac. 
+We should be careful, however, to distinguish $G_{\text {eff }}$, the gravitational constant for the tensor force only, from the one including the possible contribution from the scalar field, as will be discussed later.  
+
+As another point, we note that the second term on the right-hand side of \eqref{BDLag} appears to be a kinetic term of the scalar field $\varphi$, but looks slightly different. 
+First, the presence of $\varphi^{-1}$ seems to indicate a singularity. 
+Secondly, there is a multiplying coefficient $\omega$. These are, however, superficial differences. 
+The whole term can be cast into the standard canonical form by redefining the scalar field.
+
+For this purpose we introduce a new field $\phi$ and a new dimensionless constant $\xi$, chosen to be positive, by putting
+\begin{equation}
+\varphi=\frac{1}{2} \xi \phi^{2}  \qquad \text{and} \qquad \epsilon \xi^{-1}=4 \omega 
+\end{equation}
+in terms of which the second term on the right-hand side of \eqref{BDLag} is reexpressed in the desired form;
+\begin{equation}
+\sqrt{-g}\left(-\frac{1}{2} \epsilon g^{\mu \nu} \partial_{\mu} \phi \partial_{\nu} \phi\right) 
+\end{equation}
+with $\epsilon= \pm 1=\operatorname{Sign} \omega$.
+No singularity appears, as suggested. 
+$\epsilon=+1$ corresponds to a normal field having a positive energy, in other words, not a ghost. Note that (1.11) becomes $\dot{\phi}^{2} / 2$ for $\epsilon=+1$ in the limit of flat space-time where $g^{00} \sim \eta^{00}=-1$. The choice $\epsilon=-1$ seems to indicate a negative energy, which is unacceptable physically. 
+As will be shown later in detail, however, this need not be an immediate difficulty owing to the presence of the nonminimal coupling. 
+We will show in fact that some of the models do require $\epsilon=-1$. 
+Even the extreme choice $\epsilon=0$, corresponding to choosing $\omega=0$ in the original formulation, leaving $\xi$ arbitrary, may not be excluded immediately. 
+Note also that $\phi$ has a mass dimension 1, as in the usual formulation.
+In this way \eqref{BDLag} is cast into the new form
+\begin{equation} \label{protoBD}
+\mathcal{L}_{\mathrm{BD}}=\sqrt{-g}\left(\frac{1}{2} \xi \phi^{2} R-\frac{1}{2} \epsilon g^{\mu \nu} \partial_{\mu} \phi \partial_{\nu} \phi+L_{\text {matter }}\right) 
+\end{equation}
+
+
+Discussing consequences of \eqref{protoBD} will be the main purpose of the following section. We briefly outline here subjects of particular interest.
+
+Obviously \eqref{protoBD} describes something beyond what one would obtain simply by adding the kinetic term of the scalar field to the Lagrangian with the Einstein-Hilbert term. 
+We reserve the term "scalar-tensor theory" specifically for a class of theories featuring a nonminimal coupling term or its certain extension.
+
+As we explain in the subsequent section, there are theoretical models to be categorized in this class. More general models have also been discussed. The prototype BD model still deserves detailed study, from which we may learn many lessons useful in analyzing other models.
+
+\subsubsection*{Where does scalar field comes from?}
+
+Compactified dimensions, KK theory etc.
+
+\subsection{The Field Equations}
+
+The field equations of the Brans-Dicke Lagrangian \eqref{protoBD} can be derived by varying the action with respect to the metric and also the independent field $\phi$.
+Assuming that the matter Lagrangian does not depend on $\phi$, the field equations can be given as,
+\begin{equation}\label{BDFieldEqs}
+\begin{aligned}
+    2 \varphi G_{\mu \nu} & =T_{\mu \nu}+T_{\mu \nu}^\phi-2\left(g_{\mu \nu} \square-\nabla_\mu \nabla_\nu\right) \varphi \,,\\
+    \square \varphi & =\zeta^2 T \, ,\\
+    \nabla_\mu T^{\mu \nu} & =0 \,.
+\end{aligned}
+\end{equation}
+whose explicit derivations are rather long and involves complicated manipulations, but let us examine the details. 
+First, notice that even though we choose the independent field as $\phi$, it turns out that expressing the field equations with respect to the original field $\varphi$, which was defined as $\varphi=\frac{1}{2} \xi \phi^2$, is more elegant since its D'Lambertian is directly coupled to the trace of energy momentum tensor of matter, $T_{\mu \nu}$, which is defined by
+\begin{equation}\label{MatterEMTensor}
+\frac{\delta\left(\sqrt{-g} L_{\text {matter }}\right)}{\delta g^{\mu \nu}}=-\frac{1}{2} \sqrt{-g} T_{(\mu \nu)} 
+\end{equation}
+On the other hand, $T_{\mu \nu}^{\phi}$ is the energy-momentum tensor of $\phi$ defined in the same way as in \eqref{MatterEMTensor} with $L_{\text {matter}}$ replaced by
+\begin{equation}
+L^{\phi}=-\frac{1}{2} \epsilon g^{\mu \nu} \partial_{\mu} \phi \partial_{\nu} \phi
+\end{equation}
+which yields
+\begin{equation}
+T_{\mu \nu}^{\phi}=\epsilon\left[\partial_{\mu} \phi \partial_{\nu} \phi-\frac{1}{2} g_{\mu \nu}(\partial \phi)^{2}\right] \,.
+\end{equation}
+
+To obtain the second equation of \eqref{BDFieldEqs}, first we vary the \eqref{BDLag} with respect to $\phi$, and obtain
+\begin{equation}\label{varwrtphi}
+\xi \phi R+\epsilon \square \phi=0 \,,
+\end{equation}
+where $\square$ is a covariant D'Lambertian for a scalar field, defined as usual by
+\begin{equation}
+\square \phi=\frac{1}{\sqrt{-g}} \partial_{\mu}\left(\sqrt{-g} g^{\mu \nu} \partial_{\nu} \phi\right) \,. 
+\end{equation}
+Multiplying \eqref{varwrtphi} by $\phi$ yields
+\begin{equation}
+2 \varphi R+\epsilon \phi \square \phi=0 \,.
+\end{equation}
+On the other hand, by taking the trace of the first equation of \eqref{BDFieldEqs}, we obtain
+\begin{equation}
+-2 \varphi R=T-\epsilon(\partial \phi)^{2}-6 \square \varphi \,.
+\end{equation}
+Combining this with the previous, we have
+\begin{equation}
+\epsilon\left(\phi \square \phi+(\partial \phi)^{2}\right)+6 \square \varphi=T \,.
+\end{equation}
+Using the relation
+\begin{equation}
+\square \phi^{2}=2\left(\phi \square \phi+(\partial \phi)^{2}\right) \,,
+\end{equation}
+we finally obtain
+\begin{equation}\label{TraceofBDfieldEqs}
+\square \varphi=\zeta^{2} T \,,
+\end{equation}
+where $\zeta$ is defined as
+\begin{equation}
+\zeta^{-2}=6+\epsilon \xi^{-1}=6+4 \omega \,.
+\end{equation}
+
+
+The equation \eqref{TraceofBDfieldEqs} indicates that the source of the the scalar field is given by the trace of the matter energy-momentum tensor. 
+Even though, the scalar field seems to be decoupled from matter in the Lagrangian, it couple to matter in the field equation due to the presence of nonminimal term $\varphi R$.
+
+As a remark, the coupling to matter of the scalar field vanishes in the limit $\zeta \rightarrow 0$ which is equivalent to $\xi \rightarrow 0$, or $\omega \rightarrow \infty$. 
+This means that the theory tends to Einstein's theory in this limit. However, even in this limit, the scalar field would play the role of the cosmological dark matter.
+
+Using dimensional analysis, we find that $\zeta$ has the dimension of mass ${ }^{-2}$ and $\varphi$ has the dimension of mass ${ }^{2}$, so that we may explicitly write
+\begin{equation}
+\zeta^{2}=M_{\mathrm{P}}^{-2} \frac{1}{6+\epsilon \xi^{-1}}=\frac{4 \pi G}{3+2 \omega} \,.
+\end{equation}
+
+
+The derivation of the third equation of \eqref{BDFieldEqs}, can be done from equations of motion of matter. 
+However, one can derive it directly by using the Bianchi identity, $\nabla_{\mu} G^{\mu \nu}=0$, and from the assumption that $L_{\text{matter}}$ contains no $\phi$. 
+To do this, we can put the first equation of \eqref{BDFieldEqs} into the form of a contravariant vector, and apply $\nabla_{\mu}$ to the result to obtain
+\begin{equation}
+\nabla_{\mu} T^{\mu \nu}=-\nabla_{\mu} T_{\phi}^{\mu \nu}+2\left(\left[\nabla^{\nu}, \square\right]+G^{\mu \nu} \partial_{\mu}\right) \varphi
+\end{equation}
+With a non-trivial calculations, it is possible to show that the RHS of this vanishes identically. One can find the details of the proof in Appendix D of Ref[!!!].
+
+Thus, we say that covariant conservation of matter remains unaffected by the presence of the scalar field. However, if a $\phi$-matter coupling were present in the BD Lagrangian, the right-hand side of the last expression would have had a contribution from this, so that $\nabla_\mu T^{\mu \nu}=0$ would have failed to hold.
+
+\subsubsection{Weak Field Limit}
+\end{document}
